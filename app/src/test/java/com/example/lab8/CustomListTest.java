@@ -39,9 +39,9 @@ public class CustomListTest {
         City city = new City("Estevan", "SK");
         list.addCity(city);
 
-        assertTrue(city.hasCity(city));
+        assertTrue(list.hasCity(city));
 
         // test for a city which isn't there
-        assertFalse(cityList.hasCity(new City("testCity", "testProvince")));
+        assertFalse(list.hasCity(new City("testCity", "testProvince")));
     }
 }
