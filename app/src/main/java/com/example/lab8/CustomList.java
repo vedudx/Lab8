@@ -80,7 +80,7 @@ public class CustomList extends ArrayAdapter<City> {
      * throws exception if it is not
      * @param city is the city object that needs to be deleted
      */
-    public void delete(City city){
+    public void deleteCity(City city){
         if (hasCity(city))
         {
             cities.remove(city);

@@ -47,20 +47,22 @@ public class CustomListTest {
     }
 
     @Test
-    void testDelete()
+    void testDeleteCity()
     {
         list = MockCityList();
         int listSize = list.getCount();
         City city = new City("Yellowknife", "Northwest Territories");
         list.addCity(city);
         assertEquals(listSize+1, list.getCount());
-        list.delete(city);
+        list.deleteCity(city);
         assertEquals(listSize, list.getCount());
 
         // test deleting invalid city
         assertThrows( IllegalArgumentException.class, () -> {
-            list.delete(new City("testCity", "testProvince")); });
+            list.deleteCity(new City("testCity", "testProvince")); });
 
         assertEquals(listSize, list.getCount());
     }
+
+
 }
