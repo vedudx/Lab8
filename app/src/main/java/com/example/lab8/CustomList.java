@@ -75,4 +75,22 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
 
+    /**
+     * Deletes the city if it is in citylist
+     * throws exception if it is not
+     * @param city is the city object that needs to be deleted
+     */
+    public void delete(City city){
+        if (hasCity(city))
+        {
+            cities.remove(city);
+        }
+        else
+        {
+            throw new IllegalArgumentException();
+        }
+    }
+
+
+
 }
